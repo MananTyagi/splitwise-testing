@@ -4,4 +4,13 @@ Rails.application.routes.draw do
 
   root to: "static#dashboard"
   get 'people/:id', to: 'static#person'
+  # config/routes.rb
+
+  
+  resources :expenses, only: [:new, :create] do
+    get 'friend_expenses', on: :member
+  end
+
+  
+
 end

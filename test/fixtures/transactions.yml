@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user: one
+  other_user: one
+  amount: 9.99
+  amount_type: MyString
+  expense: one
+
+two:
+  user: two
+  other_user: two
+  amount: 9.99
+  amount_type: MyString
+  expense: two

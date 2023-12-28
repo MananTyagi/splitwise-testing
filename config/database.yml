@@ -1,0 +1,21 @@
+# config/database.yml
+
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  username: postgres
+  password: password
+  host: localhost
+  pool: 5
+
+development:
+  <<: *default
+  database: postgres
+
+test:
+  <<: *default
+  database: test_postgres
+
+production:
+  <<: *default
+  database: your_app_name_production

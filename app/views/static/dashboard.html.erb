@@ -1,0 +1,31 @@
+<div style="margin-top: 20px;">
+  <%= link_to "Add Expense", new_expense_path, class: "btn btn-primary" %>
+
+  <h1>Dashboard - My Expenses</h1>
+
+  <p style="margin-bottom: 10px;">Total Balance: <%= @total_balance %></p>
+  <p style="margin-bottom: 10px;">Total You Owe: <%= @total_you_owe %></p>
+  <p style="margin-bottom: 20px;">Total Due to You: <%= @total_due_to_you %></p>
+
+  <h2>Friends Who Need to Pay to You:</h2>
+  <ul>
+    <% @friends_and_amounts_due_to_user.each do |friend| %>
+      <li style="margin-bottom: 10px;">
+        <%= friend.name %> - <%= friend.total_amount %> |
+        <%= link_to "View Expenses", friend_expenses_expense_path(friend), class: "btn btn-secondary btn-sm" %>
+      </li>
+    <% end %>
+  </ul>
+
+  <h2>Friends to Whom You Need to Pay:</h2>
+  <ul>
+    <% @friends_and_amounts_owe_by_user.each do |friend| %>
+      <li style="margin-bottom: 10px;">
+        <%= friend.name %> - <%= friend.total_amount %> |
+        <%= link_to "View Expenses", friend_expenses_expense_path(friend), class: "btn btn-secondary btn-sm" %>
+      </li>
+    <% end %>
+  </ul>
+</div>
+
+
