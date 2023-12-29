@@ -5,7 +5,7 @@ ruby '3.0.6'
 
 gem 'bootsnap', '>= 1.4.4', require: false
 gem 'wdm', '>= 0.1.0' if Gem.win_platform?
-#gem 'sqlite3'
+gem 'sqlite3'
 gem 'devise'
 gem 'bootstrap-sass', '~> 3.4.1'
 gem 'sassc-rails', '>= 2.1.0'

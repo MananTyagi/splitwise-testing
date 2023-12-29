@@ -1,21 +1,37 @@
-# config/database.yml
+# # config/database.yml
 
-default: &default
-  adapter: postgresql
-  encoding: unicode
-  username: postgres
-  password: password
-  host: localhost
-  pool: 5
+# default: &default
+#   adapter: postgresql
+#   encoding: unicode
+#   username: postgres
+#   password: password
+#   host: localhost
+#   pool: 5
+
+# development:
+#   <<: *default
+#   database: postgres
+
+# test:
+#   <<: *default
+#   database: test_postgres
+
+# production:
+#   <<: *default
+#   database: your_app_name_production
 
 development:
-  <<: *default
-  database: postgres
-
+  adapter: sqlite3
+  database: db/development.sqlite3
+  pool: 5
+  timeout: 5000
 test:
-  <<: *default
-  database: test_postgres
-
+  adapter: sqlite3
+  database: db/test.sqlite3
+  pool: 5
+  timeout: 5000
 production:
-  <<: *default
-  database: your_app_name_production
+  adapter: sqlite3
+  database: db/production.sqlite3
+  pool: 5
+  timeout: 5000
