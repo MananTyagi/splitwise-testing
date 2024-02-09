@@ -24,12 +24,4 @@
   - Friend page - `/people/:id`
 
 
-## Submission
-- Make the improvements as specified in your technical assignment task.
-- Commit all changes to the single PR.
-- Deploy your app to Heroku or any other platform.
-- Send us the link of the dpeloyed application and your PR.
 
-
-## Contact us
-If you need any help regarding this assignment or want to join [Commutatus](https://www.commutatus.com/), drop us an email at work@commutatus.com
